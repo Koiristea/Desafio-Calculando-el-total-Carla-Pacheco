@@ -9,10 +9,6 @@ let totalValue = document.querySelector(".total-value");
 const btnPlus = document.querySelector("#plus-button");
 const btnMinus = document.querySelector("#minus-button");
 
-const updateTotalValue = () => {
-    totalValue.innerHTML = amount.innerHTML * price;
-};
-
 btnPlus.addEventListener("click", () => {
     amount.innerHTML++;
     updateTotalValue();
@@ -24,3 +20,7 @@ btnMinus.addEventListener("click", () => {
         updateTotalValue();
     }
 });
+
+const updateTotalValue = () => {
+    totalValue.innerHTML = amount.innerHTML * price;
+};
